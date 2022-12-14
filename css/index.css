@@ -9,12 +9,32 @@ body{
 
 
 }
+.container{
+    /* outline: 2px solid blue; */
+    width:25%;
+    background-color: darkslategrey;
+
+    aspect-ratio: 1;
+    margin: 0px auto;
+    border-radius: 5px;
+}
+/* styling the output .screen */
 .screen{
     height: 30%;
     background-color:cadetblue;
+    display: var(--flex);
+    justify-content:flex-end;
+    align-items: flex-end;
+    font-size: 3rem;
+    color: white;
+    padding-right: 1.5rem;
+    word-wrap: break-word;
+    word-break:break-all;
+
+   
     /* outline: 2px solid blue; */
 }
-
+/* styling the button */
 button{
     border: 0px;
     padding: 1.2em 0px;
@@ -29,11 +49,10 @@ button{
     background: transparent;
 }
 button:hover{
-    transform: scale(1.2) rotate(10deg) translate(10px);
+    transform: scale(1.1) rotate(10deg) translate(10px);
     color:var(--lightgreen);
      
 }
-
 
 .buttons{
     flex-basis: 22%;
@@ -42,15 +61,7 @@ button:hover{
     /* width:20%; */
 }
 
-.container{
-    /* outline: 2px solid blue; */
-    width:25%;
-    background-color: darkslategrey;
-
-    aspect-ratio: 1;
-    margin: 0px auto;
-    border-radius: 5px;
-}
+/* styling buttons that span two columnms */
 #span-two{
     
  position: relative;
@@ -71,11 +82,13 @@ button:hover{
     transform: scale(1.1);
    
   }
+  /* styling element inside button that span two coluoms */
   .equals{
     margin-top:70%;
     z-index: 11;
     color: white;
   }
+  /* creating an after pseudo element which span over the other height*/
   #span-two:after{
     content:'';
     /* width:2rem; */
