@@ -1,55 +1,29 @@
-// function getUserInput(value){
-//     let userInput=document.querySelector(".screen");
-//    let output= userInput.textContent+=value;
 
-//    return output
-
-
-//     // console.log(userInput)
-// }
-// function percalculation(){
-//     let userInput=document.querySelector(".screen");
-//     let output= userInput.textContent+=value;
-// let result=eval(getUserInput)
-//     getUserInput(eval())
-
-    
-// }
 function getUserClick(){
     
     let operand=document.querySelectorAll(".buttons");
+    let equalBtn=document.querySelector(".button-two");
+    let display=document.querySelector(".screen");
+    let clearBtn=document.querySelector(".button-clr");
     // let operator=document.querySelectorAll(".operand");
    operand.forEach((button)=>{
     button.addEventListener("click",(e)=>{
-        // let userInput=document.querySelector(".screen");
-        // userInput.textContent+=value;
-        let userInput=document.querySelector(".screen");
         let value=e.target.dataset.num;
-        if(value==="="){
-           result= eval(userInput.textContent)
-             userInput.textContent=result;
 
-            
-        }
-        else if(value==="C"){
-           
-              userInput.textContent="";
- 
-             
-         }
-        else{
-           
-            let output= userInput.textContent+=value;
-
-        }
+        display.textContent+=value
         
 
-
     });
-    
-    
+});
+equalBtn.addEventListener("click",(e)=>{
+let result=eval(display.textContent)
+display.textContent=result;
 
 });
+clearBtn.addEventListener("click",(e)=>{
+    display.textContent=""
+
+})
 }
 
 getUserClick()

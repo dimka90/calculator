@@ -54,7 +54,9 @@ button:hover{
      
 }
 
-.buttons{
+.buttons,
+.button-two,
+.button-clr{
     flex-basis: 22%;
     height: 2rem;
    
