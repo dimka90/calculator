@@ -17,6 +17,9 @@ function getUserClick(){
     });
 });
 equalBtn.addEventListener("click",(e)=>{
+    if(display.textContent==""){
+        return 
+    }
 let result=eval(display.textContent)
 display.textContent=result;
 
@@ -26,6 +29,9 @@ clearBtn.addEventListener("click",(e)=>{
 
 });
 deleteBtn.addEventListener("click",(e)=>{
+    if (display.textContent==""){
+        return
+    }
 let delNum=display.textContent.slice(0,-1);
 display.textContent=delNum;
 })
