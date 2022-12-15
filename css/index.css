@@ -1,6 +1,7 @@
 :root{
     --lightgreen:	mediumseagreen;
     --flex:flex;
+    --Containerbg:darkslategrey;
 
 }
 
@@ -12,7 +13,9 @@ body{
 .container{
     /* outline: 2px solid blue; */
     width:25%;
-    background-color: darkslategrey;
+  
+    background-color:var(--Containerbg);
+
 
     aspect-ratio: 1;
     margin: 0px auto;
@@ -56,7 +59,8 @@ button:hover{
 
 .buttons,
 .button-two,
-.button-clr{
+.button-clr,
+.button-del{
     flex-basis: 22%;
     height: 2rem;
    
