@@ -4,3 +4,4 @@ The calculator contains
 1)Clear  button
 2)Delete button
 3)Modulor button
+usage : click on any button to trigger an event
